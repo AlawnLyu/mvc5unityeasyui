@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="506107a4960448b2ba91f77f10ced20c" Name="Diagram1" >
+        <EntityTypeShape EntityType="DB.SysRoleSysUser" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB.SysException" Width="1.5" PointX="2.625" PointY="4" />
+        <EntityTypeShape EntityType="DB.SysLog" Width="1.5" PointX="10.625" PointY="6" />
+        <EntityTypeShape EntityType="DB.SysModule" Width="1.5" PointX="5.625" PointY="1.875" />
+        <EntityTypeShape EntityType="DB.SysModuleOperate" Width="1.5" PointX="7.875" PointY="6" />
+        <EntityTypeShape EntityType="DB.SysRight" Width="1.5" PointX="7.875" PointY="2.25" />
+        <EntityTypeShape EntityType="DB.SysRightOperate" Width="1.5" PointX="10.125" PointY="2.5" />
+        <EntityTypeShape EntityType="DB.SysRole" Width="1.5" PointX="0.625" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB.SysSample" Width="1.5" PointX="5.625" PointY="10" />
+        <EntityTypeShape EntityType="DB.SysUser" Width="1.5" PointX="3" PointY="9.25" />
+        <AssociationConnector Association="DB.FK_SysModule_SysModule" />
+        <AssociationConnector Association="DB.FK_SysModuleOperate_SysModule" />
+        <AssociationConnector Association="DB.FK_SysRight_SysModule" />
+        <AssociationConnector Association="DB.FK_SysRight_SysRole" />
+        <AssociationConnector Association="DB.FK_SysRightOperate_SysRight" />
+        <AssociationConnector Association="DB.FK_SysRoleSysUser_SysRole" />
+        <AssociationConnector Association="DB.FK_SysRoleSysUser_SysUser" />
+        <EntityTypeShape EntityType="DB.MIS_Article" Width="1.5" PointX="10.625" PointY="11.125" />
+        <EntityTypeShape EntityType="DB.MIS_Article_Category" Width="1.5" PointX="8.375" PointY="10.375" />
+        <AssociationConnector Association="DB.FK_MIS_Article_MIS_Article_Category" />
+        <AssociationConnector Association="DB.FK_MIS_Article_SysUser" />
+        <AssociationConnector Association="DB.FK_MIS_Article_SysUser1" />
+        <AssociationConnector Association="DB.FK_MIS_Article_Category_MIS_Article_Category" />
+        <EntityTypeShape EntityType="DB.SysStruct" Width="1.5" PointX="12.375" PointY="0.75" />
+        <AssociationConnector Association="DB.FK_SysStruct_SysStruct" />
+        <EntityTypeShape EntityType="DB.Flow_Form" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB.Flow_FormAttr" Width="1.5" PointX="3" PointY="27.75" />
+        <EntityTypeShape EntityType="DB.Flow_FormContent" Width="1.5" PointX="5.25" PointY="13.375" />
+        <EntityTypeShape EntityType="DB.Flow_FormContentStepCheck" Width="1.5" PointX="7.5" PointY="16" />
+        <EntityTypeShape EntityType="DB.Flow_FormContentStepCheckState" Width="1.5" PointX="9.75" PointY="16.625" />
+        <EntityTypeShape EntityType="DB.Flow_Seal" Width="1.5" PointX="13.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DB.Flow_Step" Width="1.5" PointX="5.25" PointY="22.625" />
+        <EntityTypeShape EntityType="DB.Flow_StepRule" Width="1.5" PointX="7.5" PointY="23.25" />
+        <EntityTypeShape EntityType="DB.Flow_Type" Width="1.5" PointX="0.75" PointY="21.25" IsExpanded="true" />
+        <AssociationConnector Association="DB.FK_Flow_Form_Flow_Type" />
+        <AssociationConnector Association="DB.FK_Flow_FormContent_Flow_Form" />
+        <AssociationConnector Association="DB.FK_Flow_Step_Flow_Form" />
+        <AssociationConnector Association="DB.FK_Flow_FormAttr_Flow_Type" />
+        <AssociationConnector Association="DB.FK_Flow_FormContent_SysUser" />
+        <AssociationConnector Association="DB.FK_Flow_StepState_Flow_StepState" />
+        <AssociationConnector Association="DB.FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck" />
+        <AssociationConnector Association="DB.FK_Flow_FormContentStepCheckState_SysUser" />
+        <AssociationConnector Association="DB.FK_Flow_StepRule_Flow_Step" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

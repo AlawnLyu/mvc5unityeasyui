@@ -1,0 +1,13 @@
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.MIS.DAL.dll.config
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.MIS.DAL.dll
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.MIS.DAL.pdb
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.MIS.IDAL.dll
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.Models.dll
+E:\MyProject\App\App.MIS.DAL\bin\Debug\EntityFramework.dll
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.MIS.IDAL.pdb
+E:\MyProject\App\App.MIS.DAL\bin\Debug\App.Models.pdb
+E:\MyProject\App\App.MIS.DAL\bin\Debug\EntityFramework.xml
+E:\MyProject\App\App.MIS.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\MyProject\App\App.MIS.DAL\obj\Debug\App.MIS.DAL.csprojResolveAssemblyReference.cache
+E:\MyProject\App\App.MIS.DAL\obj\Debug\App.MIS.DAL.dll
+E:\MyProject\App\App.MIS.DAL\obj\Debug\App.MIS.DAL.pdb

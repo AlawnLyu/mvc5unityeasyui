@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="DBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SysRoleSysUser" EntityType="DB.SysRoleSysUser" />
+    <EntitySet Name="SysException" EntityType="DB.SysException" />
+    <EntitySet Name="SysLog" EntityType="DB.SysLog" />
+    <EntitySet Name="SysModule" EntityType="DB.SysModule" />
+    <EntitySet Name="SysModuleOperate" EntityType="DB.SysModuleOperate" />
+    <EntitySet Name="SysRight" EntityType="DB.SysRight" />
+    <EntitySet Name="SysRightOperate" EntityType="DB.SysRightOperate" />
+    <EntitySet Name="SysRole" EntityType="DB.SysRole" />
+    <EntitySet Name="SysSample" EntityType="DB.SysSample" />
+    <EntitySet Name="SysUser" EntityType="DB.SysUser" />
+    <AssociationSet Name="FK_SysModule_SysModule" Association="DB.FK_SysModule_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysModule1" EntitySet="SysModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysModuleOperate_SysModule" Association="DB.FK_SysModuleOperate_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysModuleOperate" EntitySet="SysModuleOperate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRight_SysModule" Association="DB.FK_SysRight_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysRight" EntitySet="SysRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRight_SysRole" Association="DB.FK_SysRight_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRight" EntitySet="SysRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRightOperate_SysRight" Association="DB.FK_SysRightOperate_SysRight">
+      <End Role="SysRight" EntitySet="SysRight" />
+      <End Role="SysRightOperate" EntitySet="SysRightOperate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleSysUser_SysRole" Association="DB.FK_SysRoleSysUser_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRoleSysUser" EntitySet="SysRoleSysUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleSysUser_SysUser" Association="DB.FK_SysRoleSysUser_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="SysRoleSysUser" EntitySet="SysRoleSysUser" />
+    </AssociationSet>
+    <FunctionImport Name="P_Sys_GetRightOperate" ReturnType="Collection(DB.P_Sys_GetRightOperate_Result)">
+      <Parameter Name="userId" Mode="In" Type="String" />
+      <Parameter Name="url" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_ClearUnusedRightOperate" />
+    <FunctionImport Name="P_Sys_InsertSysRight" />
+    <FunctionImport Name="P_Sys_GetRightByRoleAndModule" ReturnType="Collection(DB.P_Sys_GetRightByRoleAndModule_Result)">
+      <Parameter Name="roleId" Mode="In" Type="String" />
+      <Parameter Name="moduleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_UpdateSysRightRightFlag">
+      <Parameter Name="moduleId" Mode="In" Type="String" />
+      <Parameter Name="roleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_DeleteSysRoleSysUserByUserId">
+      <Parameter Name="userId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_GetRoleByUserId" ReturnType="Collection(DB.P_Sys_GetRoleByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_UpdateSysRoleSysUser">
+      <Parameter Name="roleId" Mode="In" Type="String" />
+      <Parameter Name="userId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_GetUserByRoleId" ReturnType="Collection(DB.P_Sys_GetUserByRoleId_Result)">
+      <Parameter Name="RoleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_Sys_DeleteSysRoleSysUserByRoleId">
+      <Parameter Name="roleId" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="MIS_Article" EntityType="DB.MIS_Article" />
+    <EntitySet Name="MIS_Article_Category" EntityType="DB.MIS_Article_Category" />
+    <AssociationSet Name="FK_MIS_Article_MIS_Article_Category" Association="DB.FK_MIS_Article_MIS_Article_Category">
+      <End Role="MIS_Article_Category" EntitySet="MIS_Article_Category" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_SysUser" Association="DB.FK_MIS_Article_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_SysUser1" Association="DB.FK_MIS_Article_SysUser1">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_Category_MIS_Article_Category" Association="DB.FK_MIS_Article_Category_MIS_Article_Category">
+      <End Role="MIS_Article_Category" EntitySet="MIS_Article_Category" />
+      <End Role="MIS_Article_Category1" EntitySet="MIS_Article_Category" />
+    </AssociationSet>
+    <EntitySet Name="SysStruct" EntityType="DB.SysStruct" />
+    <AssociationSet Name="FK_SysStruct_SysStruct" Association="DB.FK_SysStruct_SysStruct">
+      <End Role="SysStruct" EntitySet="SysStruct" />
+      <End Role="SysStruct1" EntitySet="SysStruct" />
+    </AssociationSet>
+    <EntitySet Name="Flow_Form" EntityType="DB.Flow_Form" />
+    <EntitySet Name="Flow_FormAttr" EntityType="DB.Flow_FormAttr" />
+    <EntitySet Name="Flow_FormContent" EntityType="DB.Flow_FormContent" />
+    <EntitySet Name="Flow_FormContentStepCheck" EntityType="DB.Flow_FormContentStepCheck" />
+    <EntitySet Name="Flow_FormContentStepCheckState" EntityType="DB.Flow_FormContentStepCheckState" />
+    <EntitySet Name="Flow_Seal" EntityType="DB.Flow_Seal" />
+    <EntitySet Name="Flow_Step" EntityType="DB.Flow_Step" />
+    <EntitySet Name="Flow_StepRule" EntityType="DB.Flow_StepRule" />
+    <EntitySet Name="Flow_Type" EntityType="DB.Flow_Type" />
+    <AssociationSet Name="FK_Flow_Form_Flow_Type" Association="DB.FK_Flow_Form_Flow_Type">
+      <End Role="Flow_Type" EntitySet="Flow_Type" />
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContent_Flow_Form" Association="DB.FK_Flow_FormContent_Flow_Form">
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_Step_Flow_Form" Association="DB.FK_Flow_Step_Flow_Form">
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+      <End Role="Flow_Step" EntitySet="Flow_Step" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormAttr_Flow_Type" Association="DB.FK_Flow_FormAttr_Flow_Type">
+      <End Role="Flow_Type" EntitySet="Flow_Type" />
+      <End Role="Flow_FormAttr" EntitySet="Flow_FormAttr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContent_SysUser" Association="DB.FK_Flow_FormContent_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_StepState_Flow_StepState" Association="DB.FK_Flow_StepState_Flow_StepState">
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+      <End Role="Flow_FormContentStepCheck" EntitySet="Flow_FormContentStepCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck" Association="DB.FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck">
+      <End Role="Flow_FormContentStepCheck" EntitySet="Flow_FormContentStepCheck" />
+      <End Role="Flow_FormContentStepCheckState" EntitySet="Flow_FormContentStepCheckState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContentStepCheckState_SysUser" Association="DB.FK_Flow_FormContentStepCheckState_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="Flow_FormContentStepCheckState" EntitySet="Flow_FormContentStepCheckState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_StepRule_Flow_Step" Association="DB.FK_Flow_StepRule_Flow_Step">
+      <End Role="Flow_Step" EntitySet="Flow_Step" />
+      <End Role="Flow_StepRule" EntitySet="Flow_StepRule" />
+    </AssociationSet>
+    <FunctionImport Name="P_Sys_GetUserByDepId" ReturnType="Collection(DB.P_Sys_GetUserByDepId_Result)">
+      <Parameter Name="DepId" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="SysRoleSysUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SysUserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SysRoleId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysRole" Relationship="DB.FK_SysRoleSysUser_SysRole" FromRole="SysRoleSysUser" ToRole="SysRole" />
+    <NavigationProperty Name="SysUser" Relationship="DB.FK_SysRoleSysUser_SysUser" FromRole="SysRoleSysUser" ToRole="SysUser" />
+  </EntityType>
+  <EntityType Name="SysException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HelpLink" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="StackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TargetSite" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Data" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SysLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Result" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Module" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SysModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EnglishName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Iconic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatePerson" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="IsLast" Type="Boolean" Nullable="false" />
+    <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="SysModule1" Relationship="DB.FK_SysModule_SysModule" FromRole="SysModule" ToRole="SysModule1" />
+    <NavigationProperty Name="SysModule2" Relationship="DB.FK_SysModule_SysModule" FromRole="SysModule1" ToRole="SysModule" />
+    <NavigationProperty Name="SysModuleOperate" Relationship="DB.FK_SysModuleOperate_SysModule" FromRole="SysModule" ToRole="SysModuleOperate" />
+    <NavigationProperty Name="SysRight" Relationship="DB.FK_SysRight_SysModule" FromRole="SysModule" ToRole="SysRight" />
+    <Property Name="Enable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="SysModuleOperate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="KeyCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SysModule" Relationship="DB.FK_SysModuleOperate_SysModule" FromRole="SysModuleOperate" ToRole="SysModule" />
+  </EntityType>
+  <EntityType Name="SysRight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RoleId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rightflag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SysModule" Relationship="DB.FK_SysRight_SysModule" FromRole="SysRight" ToRole="SysModule" />
+    <NavigationProperty Name="SysRole" Relationship="DB.FK_SysRight_SysRole" FromRole="SysRight" ToRole="SysRole" />
+    <NavigationProperty Name="SysRightOperate" Relationship="DB.FK_SysRightOperate_SysRight" FromRole="SysRight" ToRole="SysRightOperate" />
+  </EntityType>
+  <EntityType Name="SysRightOperate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RightId" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="KeyCode" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SysRight" Relationship="DB.FK_SysRightOperate_SysRight" FromRole="SysRightOperate" ToRole="SysRight" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatePerson" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysRight" Relationship="DB.FK_SysRight_SysRole" FromRole="SysRole" ToRole="SysRight" />
+    <NavigationProperty Name="SysRoleSysUser" Relationship="DB.FK_SysRoleSysUser_SysRole" FromRole="SysRole" ToRole="SysRoleSysUser" />
+  </EntityType>
+  <EntityType Name="SysSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Bir" Type="DateTime" Precision="3" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TrueName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Card" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MobileNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="QQ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OtherContact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Province" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Village" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="CreatePerson" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Birthday" Type="DateTime" Precision="3" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <Property Name="Marital" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Political" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Native" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="School" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Professional" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Degree" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DepId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PosId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expertise" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="JobState" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Photo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Attach" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SysRoleSysUser" Relationship="DB.FK_SysRoleSysUser_SysUser" FromRole="SysUser" ToRole="SysRoleSysUser" />
+    <NavigationProperty Name="MIS_Article" Relationship="DB.FK_MIS_Article_SysUser" FromRole="SysUser" ToRole="MIS_Article" />
+    <NavigationProperty Name="MIS_Article1" Relationship="DB.FK_MIS_Article_SysUser1" FromRole="SysUser" ToRole="MIS_Article" />
+    <NavigationProperty Name="Flow_FormContent" Relationship="DB.FK_Flow_FormContent_SysUser" FromRole="SysUser" ToRole="Flow_FormContent" />
+    <NavigationProperty Name="Flow_FormContentStepCheckState" Relationship="DB.FK_Flow_FormContentStepCheckState_SysUser" FromRole="SysUser" ToRole="Flow_FormContentStepCheckState" />
+  </EntityType>
+  <Association Name="FK_SysModule_SysModule">
+    <End Type="DB.SysModule" Role="SysModule" Multiplicity="0..1" />
+    <End Type="DB.SysModule" Role="SysModule1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysModule1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysModuleOperate_SysModule">
+    <End Type="DB.SysModule" Role="SysModule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysModuleOperate" Role="SysModuleOperate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysModuleOperate">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRight_SysModule">
+    <End Type="DB.SysModule" Role="SysModule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysRight" Role="SysRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRight">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRight_SysRole">
+    <End Type="DB.SysRole" Role="SysRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysRight" Role="SysRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRight">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRightOperate_SysRight">
+    <End Type="DB.SysRight" Role="SysRight" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysRightOperate" Role="SysRightOperate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRight">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRightOperate">
+        <PropertyRef Name="RightId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleSysUser_SysRole">
+    <End Type="DB.SysRole" Role="SysRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysRoleSysUser" Role="SysRoleSysUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysUser">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleSysUser_SysUser">
+    <End Type="DB.SysUser" Role="SysUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DB.SysRoleSysUser" Role="SysRoleSysUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysUser">
+        <PropertyRef Name="SysUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="P_Sys_GetRightOperate_Result">
+    <Property Type="String" Name="KeyCode" Nullable="false" MaxLength="200" />
+    <Property Type="Boolean" Name="IsValid" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="P_Sys_GetRightByRoleAndModule_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="KeyCode" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="ModuleId" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="isvalid" Nullable="false" />
+    <Property Type="Int32" Name="Sort" Nullable="false" />
+    <Property Type="String" Name="RightId" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="P_Sys_GetRoleByUserId_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="4000" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CreatePerson" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="flag" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="P_Sys_GetUserByRoleId_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="TrueName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Card" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MobileNumber" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="QQ" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="OtherContact" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Province" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Village" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="State" Nullable="true" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreatePerson" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JoinDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Marital" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Political" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Nationality" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Native" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="School" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Professional" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Degree" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DepId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PosId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Expertise" Nullable="true" MaxLength="3000" />
+    <Property Type="String" Name="JobState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Photo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Attach" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="flag" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="MIS_Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChannelId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ImgUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BodyContent" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="Click" Type="Int32" />
+    <Property Name="CheckFlag" Type="Int32" Nullable="false" />
+    <Property Name="Checker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CheckDateTime" Type="DateTime" Precision="3" />
+    <Property Name="Creater" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="MIS_Article_Category" Relationship="DB.FK_MIS_Article_MIS_Article_Category" FromRole="MIS_Article" ToRole="MIS_Article_Category" />
+    <NavigationProperty Name="SysUser" Relationship="DB.FK_MIS_Article_SysUser" FromRole="MIS_Article" ToRole="SysUser" />
+    <NavigationProperty Name="SysUser1" Relationship="DB.FK_MIS_Article_SysUser1" FromRole="MIS_Article" ToRole="SysUser" />
+  </EntityType>
+  <EntityType Name="MIS_Article_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ChannelId" Type="Int32" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="ImgUrl" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BodyContent" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MIS_Article" Relationship="DB.FK_MIS_Article_MIS_Article_Category" FromRole="MIS_Article_Category" ToRole="MIS_Article" />
+    <NavigationProperty Name="MIS_Article_Category1" Relationship="DB.FK_MIS_Article_Category_MIS_Article_Category" FromRole="MIS_Article_Category" ToRole="MIS_Article_Category1" />
+    <NavigationProperty Name="MIS_Article_Category2" Relationship="DB.FK_MIS_Article_Category_MIS_Article_Category" FromRole="MIS_Article_Category1" ToRole="MIS_Article_Category" />
+  </EntityType>
+  <Association Name="FK_MIS_Article_MIS_Article_Category">
+    <End Type="DB.MIS_Article_Category" Role="MIS_Article_Category" Multiplicity="1" />
+    <End Type="DB.MIS_Article" Role="MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MIS_Article_Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_SysUser">
+    <End Type="DB.SysUser" Role="SysUser" Multiplicity="0..1" />
+    <End Type="DB.MIS_Article" Role="MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="Creater" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_SysUser1">
+    <End Type="DB.SysUser" Role="SysUser" Multiplicity="0..1" />
+    <End Type="DB.MIS_Article" Role="MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="Checker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_Category_MIS_Article_Category">
+    <End Type="DB.MIS_Article_Category" Role="MIS_Article_Category" Multiplicity="0..1" />
+    <End Type="DB.MIS_Article_Category" Role="MIS_Article_Category1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MIS_Article_Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article_Category1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SysStruct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ParentId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <Property Name="Higher" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Enable" Type="Boolean" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="SysStruct1" Relationship="DB.FK_SysStruct_SysStruct" FromRole="SysStruct" ToRole="SysStruct1" />
+    <NavigationProperty Name="SysStruct2" Relationship="DB.FK_SysStruct_SysStruct" FromRole="SysStruct1" ToRole="SysStruct" />
+  </EntityType>
+  <Association Name="FK_SysStruct_SysStruct">
+    <End Type="DB.SysStruct" Role="SysStruct" Multiplicity="1" />
+    <End Type="DB.SysStruct" Role="SysStruct1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysStruct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysStruct1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Flow_Form">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="UsingDep" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="TypeId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="HtmlForm" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AttrA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrF" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrI" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrJ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrQ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrW" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrZ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Flow_Type" Relationship="DB.FK_Flow_Form_Flow_Type" FromRole="Flow_Form" ToRole="Flow_Type" />
+    <NavigationProperty Name="Flow_FormContent" Relationship="DB.FK_Flow_FormContent_Flow_Form" FromRole="Flow_Form" ToRole="Flow_FormContent" />
+    <NavigationProperty Name="Flow_Step" Relationship="DB.FK_Flow_Step_Flow_Form" FromRole="Flow_Form" ToRole="Flow_Step" />
+  </EntityType>
+  <EntityType Name="Flow_FormAttr">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CheckJS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TypeId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="OptionList" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsValid" Type="Boolean" />
+    <NavigationProperty Name="Flow_Type" Relationship="DB.FK_Flow_FormAttr_Flow_Type" FromRole="Flow_FormAttr" ToRole="Flow_Type" />
+  </EntityType>
+  <EntityType Name="Flow_FormContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FormId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FormLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AttrA" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrB" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrC" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrD" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrE" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrF" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrG" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrH" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrI" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrJ" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrK" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrL" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrM" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrN" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrO" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrP" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrQ" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrR" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrS" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrT" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrU" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrV" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrW" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrX" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrY" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="AttrZ" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="CustomMember" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="TimeOut" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Flow_Form" Relationship="DB.FK_Flow_FormContent_Flow_Form" FromRole="Flow_FormContent" ToRole="Flow_Form" />
+    <NavigationProperty Name="SysUser" Relationship="DB.FK_Flow_FormContent_SysUser" FromRole="Flow_FormContent" ToRole="SysUser" />
+    <NavigationProperty Name="Flow_FormContentStepCheck" Relationship="DB.FK_Flow_StepState_Flow_StepState" FromRole="Flow_FormContent" ToRole="Flow_FormContentStepCheck" />
+  </EntityType>
+  <EntityType Name="Flow_FormContentStepCheck">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContentId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StepId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="Int32" Nullable="false" />
+    <Property Name="StateFlag" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsEnd" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Flow_FormContent" Relationship="DB.FK_Flow_StepState_Flow_StepState" FromRole="Flow_FormContentStepCheck" ToRole="Flow_FormContent" />
+    <NavigationProperty Name="Flow_FormContentStepCheckState" Relationship="DB.FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck" FromRole="Flow_FormContentStepCheck" ToRole="Flow_FormContentStepCheckState" />
+  </EntityType>
+  <EntityType Name="Flow_FormContentStepCheckState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StepCheckId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CheckFlag" Type="Int32" Nullable="false" />
+    <Property Name="Reamrk" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="TheSeal" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Flow_FormContentStepCheck" Relationship="DB.FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck" FromRole="Flow_FormContentStepCheckState" ToRole="Flow_FormContentStepCheck" />
+    <NavigationProperty Name="SysUser" Relationship="DB.FK_Flow_FormContentStepCheckState_SysUser" FromRole="Flow_FormContentStepCheckState" ToRole="SysUser" />
+  </EntityType>
+  <EntityType Name="Flow_Seal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Path" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Using" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Flow_Step">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <Property Name="FormId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FlowRule" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsCustom" Type="Boolean" Nullable="false" />
+    <Property Name="IsAllCheck" Type="Boolean" Nullable="false" />
+    <Property Name="Execution" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CompulsoryOver" Type="Boolean" Nullable="false" />
+    <Property Name="IsEditAttr" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Flow_Form" Relationship="DB.FK_Flow_Step_Flow_Form" FromRole="Flow_Step" ToRole="Flow_Form" />
+    <NavigationProperty Name="Flow_StepRule" Relationship="DB.FK_Flow_StepRule_Flow_Step" FromRole="Flow_Step" ToRole="Flow_StepRule" />
+  </EntityType>
+  <EntityType Name="Flow_StepRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StepId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AttrId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Operator" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Result" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NextStep" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Flow_Step" Relationship="DB.FK_Flow_StepRule_Flow_Step" FromRole="Flow_StepRule" ToRole="Flow_Step" />
+  </EntityType>
+  <EntityType Name="Flow_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Sort" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Flow_Form" Relationship="DB.FK_Flow_Form_Flow_Type" FromRole="Flow_Type" ToRole="Flow_Form" />
+    <NavigationProperty Name="Flow_FormAttr" Relationship="DB.FK_Flow_FormAttr_Flow_Type" FromRole="Flow_Type" ToRole="Flow_FormAttr" />
+  </EntityType>
+  <Association Name="FK_Flow_Form_Flow_Type">
+    <End Type="DB.Flow_Type" Role="Flow_Type" Multiplicity="1" />
+    <End Type="DB.Flow_Form" Role="Flow_Form" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_Form">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContent_Flow_Form">
+    <End Type="DB.Flow_Form" Role="Flow_Form" Multiplicity="1" />
+    <End Type="DB.Flow_FormContent" Role="Flow_FormContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Form">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContent">
+        <PropertyRef Name="FormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_Step_Flow_Form">
+    <End Type="DB.Flow_Form" Role="Flow_Form" Multiplicity="1" />
+    <End Type="DB.Flow_Step" Role="Flow_Step" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Form">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_Step">
+        <PropertyRef Name="FormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormAttr_Flow_Type">
+    <End Type="DB.Flow_Type" Role="Flow_Type" Multiplicity="1" />
+    <End Type="DB.Flow_FormAttr" Role="Flow_FormAttr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormAttr">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContent_SysUser">
+    <End Type="DB.SysUser" Role="SysUser" Multiplicity="1" />
+    <End Type="DB.Flow_FormContent" Role="Flow_FormContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContent">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_StepState_Flow_StepState">
+    <End Type="DB.Flow_FormContent" Role="Flow_FormContent" Multiplicity="1" />
+    <End Type="DB.Flow_FormContentStepCheck" Role="Flow_FormContentStepCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_FormContent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheck">
+        <PropertyRef Name="ContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck">
+    <End Type="DB.Flow_FormContentStepCheck" Role="Flow_FormContentStepCheck" Multiplicity="1" />
+    <End Type="DB.Flow_FormContentStepCheckState" Role="Flow_FormContentStepCheckState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_FormContentStepCheck">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheckState">
+        <PropertyRef Name="StepCheckId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContentStepCheckState_SysUser">
+    <End Type="DB.SysUser" Role="SysUser" Multiplicity="1" />
+    <End Type="DB.Flow_FormContentStepCheckState" Role="Flow_FormContentStepCheckState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheckState">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_StepRule_Flow_Step">
+    <End Type="DB.Flow_Step" Role="Flow_Step" Multiplicity="1" />
+    <End Type="DB.Flow_StepRule" Role="Flow_StepRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Step">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_StepRule">
+        <PropertyRef Name="StepId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="P_Sys_GetUserByDepId_Result">
+    <Property Type="String" Name="Id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="TrueName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Card" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MobileNumber" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="QQ" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmailAddress" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="OtherContact" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Province" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Village" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="200" />
+    <Property Type="Boolean" Name="State" Nullable="true" />
+    <Property Type="DateTime" Name="CreateTime" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CreatePerson" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Sex" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="Birthday" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="JoinDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Marital" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Political" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Nationality" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Native" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="School" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Professional" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Degree" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="DepId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PosId" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Expertise" Nullable="true" MaxLength="3000" />
+    <Property Type="String" Name="JobState" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Photo" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Attach" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="flag" Nullable="false" />
+  </ComplexType>
+</Schema>

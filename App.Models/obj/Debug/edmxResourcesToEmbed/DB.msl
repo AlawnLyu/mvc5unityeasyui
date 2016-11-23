@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="DB" />
+  <Alias Key="Target" Value="DB.Store" />
+  <EntityContainerMapping CdmEntityContainer="DBContainer" StorageEntityContainer="DBStoreContainer">
+    <EntitySetMapping Name="SysRoleSysUser">
+      <EntityTypeMapping TypeName="DB.SysRoleSysUser">
+        <MappingFragment StoreEntitySet="SysRoleSysUser">
+          <ScalarProperty Name="SysRoleId" ColumnName="SysRoleId" />
+          <ScalarProperty Name="SysUserId" ColumnName="SysUserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysException">
+      <EntityTypeMapping TypeName="DB.SysException">
+        <MappingFragment StoreEntitySet="SysException">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="TargetSite" ColumnName="TargetSite" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="HelpLink" ColumnName="HelpLink" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysLog">
+      <EntityTypeMapping TypeName="DB.SysLog">
+        <MappingFragment StoreEntitySet="SysLog">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Module" ColumnName="Module" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysModule">
+      <EntityTypeMapping TypeName="DB.SysModule">
+        <MappingFragment StoreEntitySet="SysModule">
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="IsLast" ColumnName="IsLast" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Iconic" ColumnName="Iconic" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysModuleOperate">
+      <EntityTypeMapping TypeName="DB.SysModuleOperate">
+        <MappingFragment StoreEntitySet="SysModuleOperate">
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="KeyCode" ColumnName="KeyCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRight">
+      <EntityTypeMapping TypeName="DB.SysRight">
+        <MappingFragment StoreEntitySet="SysRight">
+          <ScalarProperty Name="Rightflag" ColumnName="Rightflag" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRightOperate">
+      <EntityTypeMapping TypeName="DB.SysRightOperate">
+        <MappingFragment StoreEntitySet="SysRightOperate">
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="KeyCode" ColumnName="KeyCode" />
+          <ScalarProperty Name="RightId" ColumnName="RightId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysRole">
+      <EntityTypeMapping TypeName="DB.SysRole">
+        <MappingFragment StoreEntitySet="SysRole">
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysSample">
+      <EntityTypeMapping TypeName="DB.SysSample">
+        <MappingFragment StoreEntitySet="SysSample">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Bir" ColumnName="Bir" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysUser">
+      <EntityTypeMapping TypeName="DB.SysUser">
+        <MappingFragment StoreEntitySet="SysUser">
+          <ScalarProperty Name="Attach" ColumnName="Attach" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="JobState" ColumnName="JobState" />
+          <ScalarProperty Name="Expertise" ColumnName="Expertise" />
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="DepId" ColumnName="DepId" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="Professional" ColumnName="Professional" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Native" ColumnName="Native" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Marital" ColumnName="Marital" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="OtherContact" ColumnName="OtherContact" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Card" ColumnName="Card" />
+          <ScalarProperty Name="TrueName" ColumnName="TrueName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_GetRightOperate" FunctionName="DB.Store.P_Sys_GetRightOperate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB.P_Sys_GetRightOperate_Result">
+          <ScalarProperty Name="KeyCode" ColumnName="KeyCode" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_ClearUnusedRightOperate" FunctionName="DB.Store.P_Sys_ClearUnusedRightOperate" />
+    <FunctionImportMapping FunctionImportName="P_Sys_InsertSysRight" FunctionName="DB.Store.P_Sys_InsertSysRight" />
+    <FunctionImportMapping FunctionImportName="P_Sys_GetRightByRoleAndModule" FunctionName="DB.Store.P_Sys_GetRightByRoleAndModule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB.P_Sys_GetRightByRoleAndModule_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="KeyCode" ColumnName="KeyCode" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="isvalid" ColumnName="isvalid" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="RightId" ColumnName="RightId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_UpdateSysRightRightFlag" FunctionName="DB.Store.P_Sys_UpdateSysRightRightFlag" />
+    <FunctionImportMapping FunctionImportName="P_Sys_DeleteSysRoleSysUserByUserId" FunctionName="DB.Store.P_Sys_DeleteSysRoleSysUserByUserId" />
+    <FunctionImportMapping FunctionImportName="P_Sys_GetRoleByUserId" FunctionName="DB.Store.P_Sys_GetRoleByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB.P_Sys_GetRoleByUserId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_UpdateSysRoleSysUser" FunctionName="DB.Store.P_Sys_UpdateSysRoleSysUser" />
+    <FunctionImportMapping FunctionImportName="P_Sys_GetUserByRoleId" FunctionName="DB.Store.P_Sys_GetUserByRoleId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB.P_Sys_GetUserByRoleId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="TrueName" ColumnName="TrueName" />
+          <ScalarProperty Name="Card" ColumnName="Card" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="OtherContact" ColumnName="OtherContact" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="Marital" ColumnName="Marital" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Native" ColumnName="Native" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Professional" ColumnName="Professional" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="DepId" ColumnName="DepId" />
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="Expertise" ColumnName="Expertise" />
+          <ScalarProperty Name="JobState" ColumnName="JobState" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Attach" ColumnName="Attach" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_DeleteSysRoleSysUserByRoleId" FunctionName="DB.Store.P_Sys_DeleteSysRoleSysUserByRoleId" />
+    <EntitySetMapping Name="MIS_Article">
+      <EntityTypeMapping TypeName="DB.MIS_Article">
+        <MappingFragment StoreEntitySet="MIS_Article">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Creater" ColumnName="Creater" />
+          <ScalarProperty Name="CheckDateTime" ColumnName="CheckDateTime" />
+          <ScalarProperty Name="Checker" ColumnName="Checker" />
+          <ScalarProperty Name="CheckFlag" ColumnName="CheckFlag" />
+          <ScalarProperty Name="Click" ColumnName="Click" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="BodyContent" ColumnName="BodyContent" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MIS_Article_Category">
+      <EntityTypeMapping TypeName="DB.MIS_Article_Category">
+        <MappingFragment StoreEntitySet="MIS_Article_Category">
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="BodyContent" ColumnName="BodyContent" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SysStruct">
+      <EntityTypeMapping TypeName="DB.SysStruct">
+        <MappingFragment StoreEntitySet="SysStruct">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="Higher" ColumnName="Higher" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_Form">
+      <EntityTypeMapping TypeName="DB.Flow_Form">
+        <MappingFragment StoreEntitySet="Flow_Form">
+          <ScalarProperty Name="AttrZ" ColumnName="AttrZ" />
+          <ScalarProperty Name="AttrY" ColumnName="AttrY" />
+          <ScalarProperty Name="AttrX" ColumnName="AttrX" />
+          <ScalarProperty Name="AttrW" ColumnName="AttrW" />
+          <ScalarProperty Name="AttrV" ColumnName="AttrV" />
+          <ScalarProperty Name="AttrU" ColumnName="AttrU" />
+          <ScalarProperty Name="AttrT" ColumnName="AttrT" />
+          <ScalarProperty Name="AttrS" ColumnName="AttrS" />
+          <ScalarProperty Name="AttrR" ColumnName="AttrR" />
+          <ScalarProperty Name="AttrQ" ColumnName="AttrQ" />
+          <ScalarProperty Name="AttrP" ColumnName="AttrP" />
+          <ScalarProperty Name="AttrO" ColumnName="AttrO" />
+          <ScalarProperty Name="AttrN" ColumnName="AttrN" />
+          <ScalarProperty Name="AttrM" ColumnName="AttrM" />
+          <ScalarProperty Name="AttrL" ColumnName="AttrL" />
+          <ScalarProperty Name="AttrK" ColumnName="AttrK" />
+          <ScalarProperty Name="AttrJ" ColumnName="AttrJ" />
+          <ScalarProperty Name="AttrI" ColumnName="AttrI" />
+          <ScalarProperty Name="AttrH" ColumnName="AttrH" />
+          <ScalarProperty Name="AttrG" ColumnName="AttrG" />
+          <ScalarProperty Name="AttrF" ColumnName="AttrF" />
+          <ScalarProperty Name="AttrE" ColumnName="AttrE" />
+          <ScalarProperty Name="AttrD" ColumnName="AttrD" />
+          <ScalarProperty Name="AttrC" ColumnName="AttrC" />
+          <ScalarProperty Name="AttrB" ColumnName="AttrB" />
+          <ScalarProperty Name="AttrA" ColumnName="AttrA" />
+          <ScalarProperty Name="HtmlForm" ColumnName="HtmlForm" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="UsingDep" ColumnName="UsingDep" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_FormAttr">
+      <EntityTypeMapping TypeName="DB.Flow_FormAttr">
+        <MappingFragment StoreEntitySet="Flow_FormAttr">
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="OptionList" ColumnName="OptionList" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="CheckJS" ColumnName="CheckJS" />
+          <ScalarProperty Name="AttrType" ColumnName="AttrType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_FormContent">
+      <EntityTypeMapping TypeName="DB.Flow_FormContent">
+        <MappingFragment StoreEntitySet="Flow_FormContent">
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="CustomMember" ColumnName="CustomMember" />
+          <ScalarProperty Name="AttrZ" ColumnName="AttrZ" />
+          <ScalarProperty Name="AttrY" ColumnName="AttrY" />
+          <ScalarProperty Name="AttrX" ColumnName="AttrX" />
+          <ScalarProperty Name="AttrW" ColumnName="AttrW" />
+          <ScalarProperty Name="AttrV" ColumnName="AttrV" />
+          <ScalarProperty Name="AttrU" ColumnName="AttrU" />
+          <ScalarProperty Name="AttrT" ColumnName="AttrT" />
+          <ScalarProperty Name="AttrS" ColumnName="AttrS" />
+          <ScalarProperty Name="AttrR" ColumnName="AttrR" />
+          <ScalarProperty Name="AttrQ" ColumnName="AttrQ" />
+          <ScalarProperty Name="AttrP" ColumnName="AttrP" />
+          <ScalarProperty Name="AttrO" ColumnName="AttrO" />
+          <ScalarProperty Name="AttrN" ColumnName="AttrN" />
+          <ScalarProperty Name="AttrM" ColumnName="AttrM" />
+          <ScalarProperty Name="AttrL" ColumnName="AttrL" />
+          <ScalarProperty Name="AttrK" ColumnName="AttrK" />
+          <ScalarProperty Name="AttrJ" ColumnName="AttrJ" />
+          <ScalarProperty Name="AttrI" ColumnName="AttrI" />
+          <ScalarProperty Name="AttrH" ColumnName="AttrH" />
+          <ScalarProperty Name="AttrG" ColumnName="AttrG" />
+          <ScalarProperty Name="AttrF" ColumnName="AttrF" />
+          <ScalarProperty Name="AttrE" ColumnName="AttrE" />
+          <ScalarProperty Name="AttrD" ColumnName="AttrD" />
+          <ScalarProperty Name="AttrC" ColumnName="AttrC" />
+          <ScalarProperty Name="AttrB" ColumnName="AttrB" />
+          <ScalarProperty Name="AttrA" ColumnName="AttrA" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="FormLevel" ColumnName="FormLevel" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_FormContentStepCheck">
+      <EntityTypeMapping TypeName="DB.Flow_FormContentStepCheck">
+        <MappingFragment StoreEntitySet="Flow_FormContentStepCheck">
+          <ScalarProperty Name="IsEnd" ColumnName="IsEnd" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="StateFlag" ColumnName="StateFlag" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="StepId" ColumnName="StepId" />
+          <ScalarProperty Name="ContentId" ColumnName="ContentId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_FormContentStepCheckState">
+      <EntityTypeMapping TypeName="DB.Flow_FormContentStepCheckState">
+        <MappingFragment StoreEntitySet="Flow_FormContentStepCheckState">
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="TheSeal" ColumnName="TheSeal" />
+          <ScalarProperty Name="Reamrk" ColumnName="Reamrk" />
+          <ScalarProperty Name="CheckFlag" ColumnName="CheckFlag" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="StepCheckId" ColumnName="StepCheckId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_Seal">
+      <EntityTypeMapping TypeName="DB.Flow_Seal">
+        <MappingFragment StoreEntitySet="Flow_Seal">
+          <ScalarProperty Name="Using" ColumnName="Using" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_Step">
+      <EntityTypeMapping TypeName="DB.Flow_Step">
+        <MappingFragment StoreEntitySet="Flow_Step">
+          <ScalarProperty Name="IsEditAttr" ColumnName="IsEditAttr" />
+          <ScalarProperty Name="CompulsoryOver" ColumnName="CompulsoryOver" />
+          <ScalarProperty Name="Execution" ColumnName="Execution" />
+          <ScalarProperty Name="IsAllCheck" ColumnName="IsAllCheck" />
+          <ScalarProperty Name="IsCustom" ColumnName="IsCustom" />
+          <ScalarProperty Name="FlowRule" ColumnName="FlowRule" />
+          <ScalarProperty Name="FormId" ColumnName="FormId" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_StepRule">
+      <EntityTypeMapping TypeName="DB.Flow_StepRule">
+        <MappingFragment StoreEntitySet="Flow_StepRule">
+          <ScalarProperty Name="NextStep" ColumnName="NextStep" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="AttrId" ColumnName="AttrId" />
+          <ScalarProperty Name="StepId" ColumnName="StepId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Flow_Type">
+      <EntityTypeMapping TypeName="DB.Flow_Type">
+        <MappingFragment StoreEntitySet="Flow_Type">
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_Sys_GetUserByDepId" FunctionName="DB.Store.P_Sys_GetUserByDepId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB.P_Sys_GetUserByDepId_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="TrueName" ColumnName="TrueName" />
+          <ScalarProperty Name="Card" ColumnName="Card" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="QQ" ColumnName="QQ" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="OtherContact" ColumnName="OtherContact" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CreatePerson" ColumnName="CreatePerson" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="JoinDate" ColumnName="JoinDate" />
+          <ScalarProperty Name="Marital" ColumnName="Marital" />
+          <ScalarProperty Name="Political" ColumnName="Political" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Native" ColumnName="Native" />
+          <ScalarProperty Name="School" ColumnName="School" />
+          <ScalarProperty Name="Professional" ColumnName="Professional" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="DepId" ColumnName="DepId" />
+          <ScalarProperty Name="PosId" ColumnName="PosId" />
+          <ScalarProperty Name="Expertise" ColumnName="Expertise" />
+          <ScalarProperty Name="JobState" ColumnName="JobState" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Attach" ColumnName="Attach" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

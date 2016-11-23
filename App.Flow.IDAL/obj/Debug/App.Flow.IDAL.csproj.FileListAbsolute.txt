@@ -1,0 +1,11 @@
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\App.Flow.IDAL.dll
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\App.Flow.IDAL.pdb
+E:\MyProject\App\App.Flow.IDAL\obj\Debug\App.Flow.IDAL.csprojResolveAssemblyReference.cache
+E:\MyProject\App\App.Flow.IDAL\obj\Debug\App.Flow.IDAL.dll
+E:\MyProject\App\App.Flow.IDAL\obj\Debug\App.Flow.IDAL.pdb
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\App.Flow.IDAL.dll.config
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\App.Models.dll
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\EntityFramework.dll
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\App.Models.pdb
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\EntityFramework.xml
+E:\MyProject\App\App.Flow.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll

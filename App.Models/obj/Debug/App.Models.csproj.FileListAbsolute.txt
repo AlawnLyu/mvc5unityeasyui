@@ -1,0 +1,12 @@
+E:\MyProject\App\App.Models\bin\Debug\App.Models.dll.config
+E:\MyProject\App\App.Models\bin\Debug\App.Models.dll
+E:\MyProject\App\App.Models\bin\Debug\App.Models.pdb
+E:\MyProject\App\App.Models\bin\Debug\EntityFramework.dll
+E:\MyProject\App\App.Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyProject\App\App.Models\bin\Debug\EntityFramework.xml
+E:\MyProject\App\App.Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyProject\App\App.Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\MyProject\App\App.Models\obj\Debug\App.Models.dll
+E:\MyProject\App\App.Models\obj\Debug\App.Models.pdb
+E:\MyProject\App\App.Models\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\MyProject\App\App.Models\obj\Debug\App.Models.csprojResolveAssemblyReference.cache

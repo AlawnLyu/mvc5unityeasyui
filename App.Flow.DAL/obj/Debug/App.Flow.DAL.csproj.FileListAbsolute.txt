@@ -1,0 +1,13 @@
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Flow.DAL.dll
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Flow.DAL.pdb
+E:\MyProject\App\App.Flow.DAL\obj\Debug\App.Flow.DAL.csprojResolveAssemblyReference.cache
+E:\MyProject\App\App.Flow.DAL\obj\Debug\App.Flow.DAL.dll
+E:\MyProject\App\App.Flow.DAL\obj\Debug\App.Flow.DAL.pdb
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Flow.DAL.dll.config
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Flow.IDAL.dll
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Models.dll
+E:\MyProject\App\App.Flow.DAL\bin\Debug\EntityFramework.dll
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Flow.IDAL.pdb
+E:\MyProject\App\App.Flow.DAL\bin\Debug\App.Models.pdb
+E:\MyProject\App\App.Flow.DAL\bin\Debug\EntityFramework.xml
+E:\MyProject\App\App.Flow.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll

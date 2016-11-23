@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Flow_Form">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="UsingDep" Type="varchar" MaxLength="2000" />
+    <Property Name="TypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="HtmlForm" Type="text" />
+    <Property Name="AttrA" Type="varchar" MaxLength="50" />
+    <Property Name="AttrB" Type="varchar" MaxLength="50" />
+    <Property Name="AttrC" Type="varchar" MaxLength="50" />
+    <Property Name="AttrD" Type="varchar" MaxLength="50" />
+    <Property Name="AttrE" Type="varchar" MaxLength="50" />
+    <Property Name="AttrF" Type="varchar" MaxLength="50" />
+    <Property Name="AttrG" Type="varchar" MaxLength="50" />
+    <Property Name="AttrH" Type="varchar" MaxLength="50" />
+    <Property Name="AttrI" Type="varchar" MaxLength="50" />
+    <Property Name="AttrJ" Type="varchar" MaxLength="50" />
+    <Property Name="AttrK" Type="varchar" MaxLength="50" />
+    <Property Name="AttrL" Type="varchar" MaxLength="50" />
+    <Property Name="AttrM" Type="varchar" MaxLength="50" />
+    <Property Name="AttrN" Type="varchar" MaxLength="50" />
+    <Property Name="AttrO" Type="varchar" MaxLength="50" />
+    <Property Name="AttrP" Type="varchar" MaxLength="50" />
+    <Property Name="AttrQ" Type="varchar" MaxLength="50" />
+    <Property Name="AttrR" Type="varchar" MaxLength="50" />
+    <Property Name="AttrS" Type="varchar" MaxLength="50" />
+    <Property Name="AttrT" Type="varchar" MaxLength="50" />
+    <Property Name="AttrU" Type="varchar" MaxLength="50" />
+    <Property Name="AttrV" Type="varchar" MaxLength="50" />
+    <Property Name="AttrW" Type="varchar" MaxLength="50" />
+    <Property Name="AttrX" Type="varchar" MaxLength="50" />
+    <Property Name="AttrY" Type="varchar" MaxLength="50" />
+    <Property Name="AttrZ" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Flow_FormAttr">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AttrType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckJS" Type="varchar" MaxLength="500" />
+    <Property Name="TypeId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="OptionList" Type="varchar" MaxLength="500" />
+    <Property Name="IsValid" Type="bit" />
+  </EntityType>
+  <EntityType Name="Flow_FormContent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FormId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FormLevel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="AttrA" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrB" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrC" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrD" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrE" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrF" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrG" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrH" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrI" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrJ" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrK" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrL" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrM" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrN" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrO" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrP" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrQ" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrR" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrS" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrT" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrU" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrV" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrW" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrX" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrY" Type="varchar" MaxLength="2048" />
+    <Property Name="AttrZ" Type="varchar" MaxLength="2048" />
+    <Property Name="CustomMember" Type="varchar" MaxLength="4000" />
+    <Property Name="TimeOut" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flow_FormContentStepCheck">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContentId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StepId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="StateFlag" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="IsEnd" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flow_FormContentStepCheckState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StepCheckId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CheckFlag" Type="int" Nullable="false" />
+    <Property Name="Reamrk" Type="varchar" MaxLength="2000" />
+    <Property Name="TheSeal" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flow_Seal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Path" Type="varchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Using" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="Flow_Step">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+    <Property Name="FormId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FlowRule" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsCustom" Type="bit" Nullable="false" />
+    <Property Name="IsAllCheck" Type="bit" Nullable="false" />
+    <Property Name="Execution" Type="varchar" MaxLength="4000" />
+    <Property Name="CompulsoryOver" Type="bit" Nullable="false" />
+    <Property Name="IsEditAttr" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Flow_StepRule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StepId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AttrId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Operator" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Result" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NextStep" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Flow_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MIS_Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChannelId" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ImgUrl" Type="varchar" MaxLength="255" />
+    <Property Name="BodyContent" Type="varchar" MaxLength="8000" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Click" Type="int" />
+    <Property Name="CheckFlag" Type="int" Nullable="false" />
+    <Property Name="Checker" Type="varchar" MaxLength="50" />
+    <Property Name="CheckDateTime" Type="datetime" />
+    <Property Name="Creater" Type="varchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MIS_Article_Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChannelId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="ImgUrl" Type="varchar" MaxLength="255" />
+    <Property Name="BodyContent" Type="varchar" MaxLength="8000" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysException">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HelpLink" Type="varchar" MaxLength="500" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="Source" Type="varchar" MaxLength="500" />
+    <Property Name="StackTrace" Type="text" />
+    <Property Name="TargetSite" Type="varchar" MaxLength="500" />
+    <Property Name="Data" Type="varchar" MaxLength="500" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Operator" Type="varchar" MaxLength="50" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="Result" Type="varchar" MaxLength="20" />
+    <Property Name="Type" Type="varchar" MaxLength="20" />
+    <Property Name="Module" Type="varchar" MaxLength="20" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysModule">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="EnglishName" Type="varchar" MaxLength="200" />
+    <Property Name="ParentId" Type="varchar" MaxLength="50" />
+    <Property Name="Url" Type="varchar" MaxLength="200" />
+    <Property Name="Iconic" Type="varchar" MaxLength="200" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="Remark" Type="varchar" MaxLength="4000" />
+    <Property Name="Enable" Type="bit" />
+    <Property Name="CreatePerson" Type="varchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="IsLast" Type="bit" Nullable="false" />
+    <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="SysModuleOperate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="KeyCode" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ModuleId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRight">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ModuleId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rightflag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRightOperate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="RightId" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="KeyCode" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CreatePerson" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysRoleSysUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SysUserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SysRoleId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysSample">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Bir" Type="datetime" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="Note" Type="varchar(max)" />
+    <Property Name="CreateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SysStruct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParentId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sort" Type="int" Nullable="false" />
+    <Property Name="Higher" Type="varchar" MaxLength="50" />
+    <Property Name="Enable" Type="bit" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="500" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TrueName" Type="varchar" MaxLength="200" />
+    <Property Name="Card" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="200" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="200" />
+    <Property Name="QQ" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="200" />
+    <Property Name="OtherContact" Type="varchar" MaxLength="200" />
+    <Property Name="Province" Type="varchar" MaxLength="200" />
+    <Property Name="City" Type="varchar" MaxLength="200" />
+    <Property Name="Village" Type="varchar" MaxLength="200" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="bit" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="CreatePerson" Type="varchar" MaxLength="200" />
+    <Property Name="Sex" Type="varchar" MaxLength="10" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="JoinDate" Type="datetime" />
+    <Property Name="Marital" Type="varchar" MaxLength="10" />
+    <Property Name="Political" Type="varchar" MaxLength="50" />
+    <Property Name="Nationality" Type="varchar" MaxLength="20" />
+    <Property Name="Native" Type="varchar" MaxLength="20" />
+    <Property Name="School" Type="varchar" MaxLength="50" />
+    <Property Name="Professional" Type="varchar" MaxLength="100" />
+    <Property Name="Degree" Type="varchar" MaxLength="20" />
+    <Property Name="DepId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PosId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Expertise" Type="varchar" MaxLength="3000" />
+    <Property Name="JobState" Type="varchar" MaxLength="20" />
+    <Property Name="Photo" Type="varchar" MaxLength="200" />
+    <Property Name="Attach" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="FK_Flow_Form_Flow_Type">
+    <End Role="Flow_Type" Type="Self.Flow_Type" Multiplicity="1" />
+    <End Role="Flow_Form" Type="Self.Flow_Form" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_Form">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormAttr_Flow_Type">
+    <End Role="Flow_Type" Type="Self.Flow_Type" Multiplicity="1" />
+    <End Role="Flow_FormAttr" Type="Self.Flow_FormAttr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormAttr">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContent_Flow_Form">
+    <End Role="Flow_Form" Type="Self.Flow_Form" Multiplicity="1" />
+    <End Role="Flow_FormContent" Type="Self.Flow_FormContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Form">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContent">
+        <PropertyRef Name="FormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContent_SysUser">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="1" />
+    <End Role="Flow_FormContent" Type="Self.Flow_FormContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContent">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck">
+    <End Role="Flow_FormContentStepCheck" Type="Self.Flow_FormContentStepCheck" Multiplicity="1" />
+    <End Role="Flow_FormContentStepCheckState" Type="Self.Flow_FormContentStepCheckState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_FormContentStepCheck">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheckState">
+        <PropertyRef Name="StepCheckId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_FormContentStepCheckState_SysUser">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="1" />
+    <End Role="Flow_FormContentStepCheckState" Type="Self.Flow_FormContentStepCheckState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheckState">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_Step_Flow_Form">
+    <End Role="Flow_Form" Type="Self.Flow_Form" Multiplicity="1" />
+    <End Role="Flow_Step" Type="Self.Flow_Step" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Form">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_Step">
+        <PropertyRef Name="FormId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_StepRule_Flow_Step">
+    <End Role="Flow_Step" Type="Self.Flow_Step" Multiplicity="1" />
+    <End Role="Flow_StepRule" Type="Self.Flow_StepRule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_Step">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_StepRule">
+        <PropertyRef Name="StepId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Flow_StepState_Flow_StepState">
+    <End Role="Flow_FormContent" Type="Self.Flow_FormContent" Multiplicity="1" />
+    <End Role="Flow_FormContentStepCheck" Type="Self.Flow_FormContentStepCheck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Flow_FormContent">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Flow_FormContentStepCheck">
+        <PropertyRef Name="ContentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_Category_MIS_Article_Category">
+    <End Role="MIS_Article_Category" Type="Self.MIS_Article_Category" Multiplicity="0..1" />
+    <End Role="MIS_Article_Category1" Type="Self.MIS_Article_Category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MIS_Article_Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article_Category1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_MIS_Article_Category">
+    <End Role="MIS_Article_Category" Type="Self.MIS_Article_Category" Multiplicity="1" />
+    <End Role="MIS_Article" Type="Self.MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MIS_Article_Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_SysUser">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+    <End Role="MIS_Article" Type="Self.MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="Creater" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIS_Article_SysUser1">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="0..1" />
+    <End Role="MIS_Article" Type="Self.MIS_Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MIS_Article">
+        <PropertyRef Name="Checker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysModule_SysModule">
+    <End Role="SysModule" Type="Self.SysModule" Multiplicity="0..1" />
+    <End Role="SysModule1" Type="Self.SysModule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysModule1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysModuleOperate_SysModule">
+    <End Role="SysModule" Type="Self.SysModule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysModuleOperate" Type="Self.SysModuleOperate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysModuleOperate">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRight_SysModule">
+    <End Role="SysModule" Type="Self.SysModule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRight" Type="Self.SysRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysModule">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRight">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRight_SysRole">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRight" Type="Self.SysRight" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRight">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRightOperate_SysRight">
+    <End Role="SysRight" Type="Self.SysRight" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRightOperate" Type="Self.SysRightOperate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRight">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRightOperate">
+        <PropertyRef Name="RightId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleSysUser_SysRole">
+    <End Role="SysRole" Type="Self.SysRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRoleSysUser" Type="Self.SysRoleSysUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysUser">
+        <PropertyRef Name="SysRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysRoleSysUser_SysUser">
+    <End Role="SysUser" Type="Self.SysUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SysRoleSysUser" Type="Self.SysRoleSysUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysRoleSysUser">
+        <PropertyRef Name="SysUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SysStruct_SysStruct">
+    <End Role="SysStruct" Type="Self.SysStruct" Multiplicity="1" />
+    <End Role="SysStruct1" Type="Self.SysStruct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SysStruct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SysStruct1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="P_Sys_ClearUnusedRightOperate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="P_Sys_DeleteSysRoleSysUserByRoleId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_DeleteSysRoleSysUserByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_GetRightByRoleAndModule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleId" Type="varchar" Mode="In" />
+    <Parameter Name="moduleId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_GetRightOperate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userId" Type="varchar" Mode="In" />
+    <Parameter Name="url" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_GetRoleByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_GetUserByDepId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_GetUserByRoleId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_InsertSysRight" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="P_Sys_UpdateSysRightRightFlag" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="moduleId" Type="varchar" Mode="In" />
+    <Parameter Name="roleId" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="P_Sys_UpdateSysRoleSysUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleId" Type="varchar" Mode="In" />
+    <Parameter Name="userId" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DBStoreContainer">
+    <EntitySet Name="Flow_Form" EntityType="Self.Flow_Form" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_FormAttr" EntityType="Self.Flow_FormAttr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_FormContent" EntityType="Self.Flow_FormContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_FormContentStepCheck" EntityType="Self.Flow_FormContentStepCheck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_FormContentStepCheckState" EntityType="Self.Flow_FormContentStepCheckState" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_Seal" EntityType="Self.Flow_Seal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_Step" EntityType="Self.Flow_Step" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_StepRule" EntityType="Self.Flow_StepRule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Flow_Type" EntityType="Self.Flow_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MIS_Article" EntityType="Self.MIS_Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MIS_Article_Category" EntityType="Self.MIS_Article_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysException" EntityType="Self.SysException" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysLog" EntityType="Self.SysLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysModule" EntityType="Self.SysModule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysModuleOperate" EntityType="Self.SysModuleOperate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRight" EntityType="Self.SysRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRightOperate" EntityType="Self.SysRightOperate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRole" EntityType="Self.SysRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysRoleSysUser" EntityType="Self.SysRoleSysUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysSample" EntityType="Self.SysSample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysStruct" EntityType="Self.SysStruct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Flow_Form_Flow_Type" Association="Self.FK_Flow_Form_Flow_Type">
+      <End Role="Flow_Type" EntitySet="Flow_Type" />
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormAttr_Flow_Type" Association="Self.FK_Flow_FormAttr_Flow_Type">
+      <End Role="Flow_Type" EntitySet="Flow_Type" />
+      <End Role="Flow_FormAttr" EntitySet="Flow_FormAttr" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContent_Flow_Form" Association="Self.FK_Flow_FormContent_Flow_Form">
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContent_SysUser" Association="Self.FK_Flow_FormContent_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck" Association="Self.FK_Flow_FormContentStepCheckState_Flow_FormContentStepCheck">
+      <End Role="Flow_FormContentStepCheck" EntitySet="Flow_FormContentStepCheck" />
+      <End Role="Flow_FormContentStepCheckState" EntitySet="Flow_FormContentStepCheckState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_FormContentStepCheckState_SysUser" Association="Self.FK_Flow_FormContentStepCheckState_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="Flow_FormContentStepCheckState" EntitySet="Flow_FormContentStepCheckState" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_Step_Flow_Form" Association="Self.FK_Flow_Step_Flow_Form">
+      <End Role="Flow_Form" EntitySet="Flow_Form" />
+      <End Role="Flow_Step" EntitySet="Flow_Step" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_StepRule_Flow_Step" Association="Self.FK_Flow_StepRule_Flow_Step">
+      <End Role="Flow_Step" EntitySet="Flow_Step" />
+      <End Role="Flow_StepRule" EntitySet="Flow_StepRule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Flow_StepState_Flow_StepState" Association="Self.FK_Flow_StepState_Flow_StepState">
+      <End Role="Flow_FormContent" EntitySet="Flow_FormContent" />
+      <End Role="Flow_FormContentStepCheck" EntitySet="Flow_FormContentStepCheck" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_Category_MIS_Article_Category" Association="Self.FK_MIS_Article_Category_MIS_Article_Category">
+      <End Role="MIS_Article_Category" EntitySet="MIS_Article_Category" />
+      <End Role="MIS_Article_Category1" EntitySet="MIS_Article_Category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_MIS_Article_Category" Association="Self.FK_MIS_Article_MIS_Article_Category">
+      <End Role="MIS_Article_Category" EntitySet="MIS_Article_Category" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_SysUser" Association="Self.FK_MIS_Article_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIS_Article_SysUser1" Association="Self.FK_MIS_Article_SysUser1">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="MIS_Article" EntitySet="MIS_Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysModule_SysModule" Association="Self.FK_SysModule_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysModule1" EntitySet="SysModule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysModuleOperate_SysModule" Association="Self.FK_SysModuleOperate_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysModuleOperate" EntitySet="SysModuleOperate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRight_SysModule" Association="Self.FK_SysRight_SysModule">
+      <End Role="SysModule" EntitySet="SysModule" />
+      <End Role="SysRight" EntitySet="SysRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRight_SysRole" Association="Self.FK_SysRight_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRight" EntitySet="SysRight" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRightOperate_SysRight" Association="Self.FK_SysRightOperate_SysRight">
+      <End Role="SysRight" EntitySet="SysRight" />
+      <End Role="SysRightOperate" EntitySet="SysRightOperate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleSysUser_SysRole" Association="Self.FK_SysRoleSysUser_SysRole">
+      <End Role="SysRole" EntitySet="SysRole" />
+      <End Role="SysRoleSysUser" EntitySet="SysRoleSysUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysRoleSysUser_SysUser" Association="Self.FK_SysRoleSysUser_SysUser">
+      <End Role="SysUser" EntitySet="SysUser" />
+      <End Role="SysRoleSysUser" EntitySet="SysRoleSysUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SysStruct_SysStruct" Association="Self.FK_SysStruct_SysStruct">
+      <End Role="SysStruct" EntitySet="SysStruct" />
+      <End Role="SysStruct1" EntitySet="SysStruct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

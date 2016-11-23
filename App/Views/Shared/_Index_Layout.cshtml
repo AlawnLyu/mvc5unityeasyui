@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/themes/gray/css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div style="padding: 5px 5px 0px 5px;">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/easyui")
+    @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            $(window).resize(function () {
+                $('#List').datagrid('resize', {
+                    width: $(window).width() - 10,
+                    height: SetGridHeightSub(39)
+                }).datagrid('resize', {
+                    width: $(window).width() - 10,
+                    height: SetGridHeightSub(39)
+                });
+            });
+        });
+    </script>
+</body>
+</html>

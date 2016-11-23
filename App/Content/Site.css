@@ -1,0 +1,386 @@
+﻿html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, button, textarea, select, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font: 12px/1.33 "微软雅黑",Verdana,"宋体",Helvetica,sans-serif;
+    background-color: #fff;
+}
+
+/*通用
+===============================================*/
+
+
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.define-head {
+    font-family: Verdana,Geneva,sans-serif;
+    background-color: #EFEFEF;
+    height: 55px;
+    overflow: hidden;
+    background: url('images/headBg.jpg');
+}
+
+    .define-head .define-logo {
+        height: 52px;
+        width: 50%;
+        float: left;
+        background: url('/Content/Images/Logo.png') 10px 7px no-repeat;
+    }
+
+        .define-head .define-logo #LoginTopLine {
+            letter-spacing: 2px;
+            margin: 8px 0px 0px 10px;
+            text-shadow: 3px 1px 6px #fff;
+            color: #000;
+            font-size: 26px;
+            height: 30px;
+            line-height: 30px;
+            padding-left: 55px;
+        }
+
+        .define-head .define-logo #LoginBottomLine {
+            letter-spacing: 1px;
+            text-shadow: 3px 1px 6px #fff;
+            color: #000;
+            font-size: 12px;
+            height: 15px;
+            line-height: 15px;
+            padding-left: 65px;
+        }
+
+    .define-head .define-account {
+        height: 50px;
+        width: 50%;
+        float: right;
+        text-align: right;
+        color: #fff;
+        line-height: 20px;
+        padding-top: 10px;
+    }
+
+        .define-head .define-account a {
+            color: #000;
+        }
+
+            .define-head .define-account a:hover {
+                color: red;
+            }
+
+        .define-head .define-account span {
+            color: green;
+            padding-left: 18px;
+            background: url(/Content/Images/icon/memeber.gif) left center no-repeat;
+        }
+
+            .define-head .define-account span b {
+                font-weight: normal;
+                color: black;
+            }
+
+.define-bottom {
+    background-color: #EFEFEF;
+    height: 20px;
+    line-height: 20px;
+}
+
+#LoginTb {
+    font-size: 14px;
+}
+
+#LoginTb {
+    font-size: 12px;
+}
+
+    #LoginTb input {
+        width: 190px;
+        height: 24px;
+        line-height: 24px;
+    }
+
+.mvctool {
+    height: 30px;
+}
+
+.searchText {
+    float: left;
+    margin: 2px 5px 0 0;
+}
+/*图标*/
+.icon-reload {
+    background: url(Images/tools.png) no-repeat 0px -176px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-search {
+    background: url(Images/tools.png) no-repeat -1px -255px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-save {
+    background: url(Images/tools.png) no-repeat 0px -133px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-ok {
+    background: url(Images/tools.png) no-repeat 0px -216px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-remove {
+    background: url(Images/tools.png) no-repeat 0px -26px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-add {
+    background: url(Images/tools.png) no-repeat 0px 4px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-edit {
+    background: url(Images/tools.png) no-repeat 0px -59px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-details {
+    background: url(Images/tools.png) no-repeat 0px -93px;
+    height: 24px;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.icon-man {
+    background: url(Images/icons.png) no-repeat 0px 0px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-return {
+    background: url(Images/icons.png) no-repeat 0px -309px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-group {
+    background: url(Images/icons.png) no-repeat 0px -42px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-key {
+    background: url(Images/icons.png) no-repeat 0px -374px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-send {
+    background: url(Images/icons.png) no-repeat 0px -293px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-show {
+    background: url(Images/icons.png) no-repeat 0px -333px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-uncheck {
+    background: url(Images/icons.png) no-repeat 0px -190px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-settings {
+    background: url(Images/icons.png) no-repeat 0px -107px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-share {
+    background: url(Images/icons.png) no-repeat 0px -126px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-flag {
+    background: url(Images/icons.png) no-repeat 0px -148px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-clock {
+    background: url(Images/icons.png) no-repeat 0px -169px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-close {
+    background: url(Images/icons.png) no-repeat 0px -64px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-cancelclose {
+    background: url(Images/icons.png) no-repeat 0px -87px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-check {
+    background: url(Images/icons.png) no-repeat 0px -210px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-comment {
+    background: url(Images/icons.png) no-repeat 0px -352px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-export {
+    background: url(Images/icons.png) no-repeat 0px -230px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-female {
+    background: url(Images/icons.png) no-repeat 0px -19px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-copy {
+    background: url(Images/icons.png) no-repeat 0px -250px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+.icon-error {
+    background: url(Images/icons.png) no-repeat 0px -271px;
+    height: 24px;
+    padding-left: 18px;
+}
+
+/*表格样式
+=============================================*/
+.blueTab {
+    background: #7eeeee;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+textarea {
+    padding: 2px;
+}
+
+.fromEditTable {
+    width: 100%;
+}
+
+    .fromEditTable td {
+        height: 30px;
+        padding-left: 5px;
+        border-bottom: dashed 1px #ccc;
+    }
+
+.setTextWidth300 input[type="text"] {
+    width: 300px;
+}
+
+.setTextWidth300 textarea {
+    width: 300px;
+    margin: 5px 0 5px 0;
+}
+
+.setTextWidth200 input[type="text"] {
+    width: 200px;
+}
+
+.setTextWidth200 textarea {
+    width: 200px;
+    margin: 5px 0 5px 0;
+}
+
+.setTextWidth100 input[type="text"] {
+    width: 100px;
+}
+
+.setTextWidth100 textarea {
+    width: 100px;
+    margin: 5px 0 5px 0;
+}
+
+.setTextWidth80 input[type="text"] {
+    width: 80px;
+}
+
+.setTextWidth80 textarea {
+    width: 80px;
+    margin: 5px 0 5px 0;
+}
+
+#ErrMesList {
+    display: none;
+}
+
+#ErrMesListContent {
+    padding-left: 10px;
+    min-width: 200px;
+    line-height: 22px;
+}
+
+    #ErrMesListContent ul li {
+        list-style: disc;
+    }

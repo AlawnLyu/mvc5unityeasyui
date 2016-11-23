@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<System.Config>
+  <appSettings>
+    <add key="DataBase" value="Integrated Security=SSPI;Initial Catalog='DB';Data Source='.';User ID='sa';Password='123456';Connect Timeout=40" />
+  </appSettings>
+</System.Config>

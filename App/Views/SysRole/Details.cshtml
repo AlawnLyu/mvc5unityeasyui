@@ -1,0 +1,48 @@
+﻿@using App.Core
+@using App.Models.Sys
+@model App.Models.Sys.SysRoleModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Index_LayoutEdit.cshtml";
+
+    List<permModel> perm = (List<permModel>)ViewBag.Perm;
+    if (perm == null)
+    {
+        perm = new List<permModel>();
+    }
+}
+
+<div class="mvctool">
+    @Html.ToolButton("btnReturn", "icon-return", "返回", false)
+</div>
+
+<table class="fromEditTable setTextWidth300">
+    <tbody>
+        <tr>
+            <td style="width:100px; text-align:right;">
+                @Html.LabelFor(model => model.Name)：
+            </td>
+            <td style="width:310px">
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+
+        <tr>
+            <td style="width:100px; text-align:right;">
+                @Html.LabelFor(model => model.Description)：
+            </td>
+            <td style="width:310px">
+                @Html.DisplayFor(model => model.Description)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $("#btnReturn").click(function () {
+            window.parent.frameReturnByClose();
+        });
+    </script>
+}

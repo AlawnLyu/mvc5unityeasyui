@@ -1,0 +1,28 @@
+﻿@using App.Common
+@using App.Core
+@using App.Models.Sys
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+
+    List<permModel> perm = (List<permModel>)ViewBag.Perm;
+    if (perm == null)
+    {
+        perm = new List<permModel>();
+    }
+}
+
+<div class="mvctool">
+    @Html.ToolButton("btnCreate", "icon-add", "新增", perm, "Create", true)
+    @Html.ToolButton("btnEdit", "icon-edit", "编辑", perm, "Edit", true)
+    @Html.ToolButton("btnDelete", "icon-remove", "删除", perm, "Delete", true)
+</div>
+
+<table id="List"></table>
+
+<div id="modalwindow" class="easyui-window" data-options="modal:true,closed:true,minimizable:false,shadow:false"></div>
+
+@section scripts{
+    <script src="~/Scripts/app/sysstruct.js"></script>
+}

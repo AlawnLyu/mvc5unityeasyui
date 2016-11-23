@@ -1,0 +1,23 @@
+﻿@using App.Core
+@{
+    ViewBag.Title = "SysSample";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+}
+
+<div id="modalwindow" class="easyui-window" data-options="modal:true,closed:true,minimizable:false,shadow:false"></div>
+
+<div class="mvctool">
+    <input id="txtQuery" type="text" class="searchText" />
+    @Html.ToolButton("btnQuery", "icon-search", "查询", true)
+    @Html.ToolButton("btnCreate", "icon-add", "新增", true)
+    @Html.ToolButton("btnEdit", "icon-edit", "编辑", true)
+    @Html.ToolButton("btnDetails", "icon-details", "详细", true)
+    @Html.ToolButton("btnDelete", "icon-remove", "删除", true)
+    @Html.ToolButton("btnRefresh", "icon-reload", "刷新", false)
+</div>
+
+<table id="List"></table>
+
+@section scripts{
+    <script src="~/Scripts/app/SysSample.js"></script>
+}

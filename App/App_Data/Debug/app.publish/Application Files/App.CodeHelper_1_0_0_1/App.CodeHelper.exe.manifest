@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="App.CodeHelper.exe" version="1.0.0.1" publicKeyToken="19f5a358dfa23000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="App.CodeHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="App.CodeHelper.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 清单选项
+          如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换
+          requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+          如果要利用文件和注册表虚拟化提供
+          向后兼容性，请删除 requestedExecutionLevel 节点。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="App.CodeHelper.exe" size="32768">
+      <assemblyIdentity name="App.CodeHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Iw6i2NrwYei+7UCAMTvE3ANfiZd87PcDom3803S1Ehw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="App.CodeHelper.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=PX0GP0A3J14OVF6\Administrator" issuerKeyHash="845cee4802bd195c1dc13c91182c179d99d50604" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>apZm/d5DtHtqSgXia55GyygSbcr8Egx5C7UYcU5nXuw=</DigestValue></Reference></SignedInfo><SignatureValue>TqPuGjW4bd1/bVbfDIY6NRUtk9fC27Zvqq8gV1pL0K4nuXl/X0XwDZuDvMdRE/EX3ap2pwz/GBL4mxkEu3z3DV0cyTdzA05hibC4bygG4lY6H2ghGlNyUaf/S3lzcMHDsfY3YWYUjQXvB+oOPu0++pgPiYoPyy9ZHLvNqhuss80=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1Rd+P6zXnR6Nt2v9JdieZ43Ecg4aa37+RpqyjVPvamy7W+FCk1cl4iBxWaTvqAvxXGiDOSM9n0I5irht1T5C7FAr3NvX2XVssqKZ8NiHHnDK8vGkxE+D0BJpm5LuCnv9xT3DBaEmg87jiRMm4u9n3vRYnq9xutXBDy+sVWWI9SU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ec5e674e7118b50b790c12fcca6d1228cb469e6be2054a6a7bb443defd66966a" Description="" Url=""><as:assemblyIdentity name="App.CodeHelper.exe" version="1.0.0.1" publicKeyToken="19f5a358dfa23000" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PX0GP0A3J14OVF6\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>C5rRs1nWlC+ZHzIMAZoJBvfmjX3ChJH3nQbZCSYZzlM=</DigestValue></Reference></SignedInfo><SignatureValue>EtPqNfEBLDKDNnHvIFRc3dqb/7leBycNvtuQkvyuPbGo3ayaLRxy03Gnaq30tlDOT5NvHVUQT7Y6VWaQRxbDakLzXnou6GEvHicoWgnZFjITByIQ6I3amuV9NNdWRd0fZTc1jiWBkdXGI3fsR90XVLtouJW7GHMyajmELyvuexc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1Rd+P6zXnR6Nt2v9JdieZ43Ecg4aa37+RpqyjVPvamy7W+FCk1cl4iBxWaTvqAvxXGiDOSM9n0I5irht1T5C7FAr3NvX2XVssqKZ8NiHHnDK8vGkxE+D0BJpm5LuCnv9xT3DBaEmg87jiRMm4u9n3vRYnq9xutXBDy+sVWWI9SU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICDTCCAXagAwIBAgIQUBRv6EZn2KFMYw1mPMusyTANBgkqhkiG9w0BAQsFADBFMUMwQQYDVQQDHjoAUABYADAARwBQADAAQQAzAEoAMQA0AE8AVgBGADYAXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMB4XDTEzMTIwNTEyNTM1NFoXDTE0MTIwNTE4NTM1NFowRTFDMEEGA1UEAx46AFAAWAAwAEcAUAAwAEEAMwBKADEANABPAFYARgA2AFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA1Rd+P6zXnR6Nt2v9JdieZ43Ecg4aa37+RpqyjVPvamy7W+FCk1cl4iBxWaTvqAvxXGiDOSM9n0I5irht1T5C7FAr3NvX2XVssqKZ8NiHHnDK8vGkxE+D0BJpm5LuCnv9xT3DBaEmg87jiRMm4u9n3vRYnq9xutXBDy+sVWWI9SUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCfde/xnrz7fM8+5Wm44CorQ+MVJuEoOlByX0bWgbWqgng6f4C6I3GsjWVWrsH7Tcx21oUdLfeIOMLANVi1KX+kn7IqxNz6Ah7IvhAQNXCz9v0JNLMnn1rGaDnmT+Kwt/oF5hlankrQFIRQDwmZ1wRX2TNHu8NuVtksebqXITIqtQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

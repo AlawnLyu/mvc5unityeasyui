@@ -1,0 +1,115 @@
+﻿@using App.Core
+@using App.Models.Sys
+@model SysStructModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Index_LayoutEdit.cshtml";
+
+    List<permModel> perm = (List<permModel>)ViewBag.Perm;
+    if (perm == null)
+    {
+        perm = new List<permModel>();
+    }
+}
+
+<div class="mvctool">
+    @Html.ToolButton("btnSave", "icon-save", "保存", perm, "Save", true)
+    @Html.ToolButton("btnReturn", "icon-return", "返回", false)
+</div>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.CreateTime)
+    <table class="fromEditTable setTextWidth300">
+        <tbody>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.Name)：
+                </td>
+                <td style="width:310px">
+                    @Html.EditorFor(model => model.Name)
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Name)</td>
+            </tr>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.ParentId)：
+                </td>
+                <td style="width:310px">
+                    @Html.TextBoxFor(model => model.ParentId, new { @readonly = true })
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.ParentId)</td>
+            </tr>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.Sort)：
+                </td>
+                <td style="width:310px">
+                    @Html.EditorFor(model => model.Sort)
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Sort)</td>
+            </tr>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.Higher)：
+                </td>
+                <td style="width:310px">
+                    @Html.EditorFor(model => model.Higher)
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Higher)</td>
+            </tr>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.Enable)：
+                </td>
+                <td style="width:310px">
+                    @Html.CheckBoxFor(model => model.Enable)
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Enable)</td>
+            </tr>
+            <tr>
+                <td style="width:100px; text-align:right;">
+                    @Html.LabelFor(model => model.Remark)：
+                </td>
+                <td style="width:310px">
+                    @Html.EditorFor(model => model.Remark)
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.Remark)</td>
+            </tr>
+        </tbody>
+    </table>
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#btnSave").click(function () {
+                if ($("form").valid()) {
+                    $.ajax({
+                        url: "@Url.Action("Edit")",
+                        type: "Post",
+                        data: $("form").serialize(),
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.type == 1) {
+                                window.parent.frameReturnByMes(data.message);
+                                window.parent.frameReturnByReload(true);
+                                window.parent.frameReturnByClose();
+                            }
+                            else {
+                                window.parent.frameReturnByMes(data.message);
+                            }
+                        }
+                    });
+                }
+                return false;
+            });
+            $("#btnReturn").click(function () {
+                window.parent.frameReturnByClose();
+            });
+        });
+    </script>
+}
+
+

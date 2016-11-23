@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+}
+
+<div id="modalwindow" class="easyui-window" data-options="modal:true,closed:true,minizable:false,shadow:false"></div>
+
+<div class="mvctool">
+    <input id="txtQuery" type="text" class="searchText" />
+    <a id="btnQuery" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text icon-search"></span><span class="l-btn-text">查询</span></span></a>
+    <div class="datagrid-btn-separator"></div>
+    <a id="btnDetails" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text icon-details"></span><span class="l-btn-text">详细</span></span></a>
+    @*<div class="datagrid-btn-separator"></div>
+    <a id="btnDelete" style="float: left;" class="l-btn l-btn-plain"><span class="l-btn-left"><span class="l-btn-text icon-remove"></span><span class="l-btn-text">删除</span></span></a>*@
+</div>
+
+<table id="List"></table>
+
+@section scripts{
+    <script src="~/Scripts/app/sysexception.js"></script>
+}
+ 

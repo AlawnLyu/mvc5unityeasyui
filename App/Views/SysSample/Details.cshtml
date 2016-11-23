@@ -1,0 +1,59 @@
+﻿@using App.Models.Sys
+@model SysSampleModel
+@{
+    ViewBag.Title = "详情";
+    Layout = "~/Views/Shared/_Index_LayoutEdit.cshtml";
+}
+
+<table class="fromEditTable setTextWidth300">
+    <tbody>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Name)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Name, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Age)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Age, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Bir)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Bir, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Note)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Note, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.CreateTime)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.CreateTime, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Photo)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Photo, new { @readonly = true })
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+﻿@using App.Core
+@using App.Models.Sys
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+
+    List<permModel> perm = (List<permModel>)ViewBag.Perm;
+    if (perm == null)
+    {
+        perm = new List<permModel>();
+    }
+}
+
+<div class="mvctool">
+    @Html.ToolButton("btnSave", "icon-save", "保存", perm, "Save", true)
+</div>
+
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td style="width: 420px; padding-right: 3px; vertical-align: top;">
+                <table id="roleList"></table>
+            </td>
+            <td style="width: 200px; padding-right: 3px; vertical-align: top;">
+                <table id="moduleList"></table>
+            </td>
+            <td style="padding-right: 3px; vertical-align: top;">
+                <table id="operateList"></table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@section scripts{
+    <script src="~/Scripts/app/sysright.js"></script>
+}

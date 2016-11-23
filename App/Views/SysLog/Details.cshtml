@@ -1,0 +1,58 @@
+﻿@model App.Models.Sys.SysLogModel
+@{
+    ViewBag.Title = "详情";
+    Layout = "~/Views/Shared/_Index_Layout.cshtml";
+}
+
+<table class="fromEditTable setTextWidth300">
+    <tbody>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Operator)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Operator, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Message)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Message, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Result)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Result, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Type)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Type, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.Module)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Module, new { @readonly = true })
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100px; text-align: right;">
+                @Html.LabelFor(model => model.CreateTime)
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.CreateTime, new { @readonly = true })
+            </td>
+        </tr>
+    </tbody>
+</table>
